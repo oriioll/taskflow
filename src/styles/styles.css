@@ -1,0 +1,24 @@
+:root {
+    --bg-primary: #1A202C;
+    --bg-task-item: #2D3748;
+    --text-primary: #F7FAFC;
+    --accent-action: #4299E1;
+    --accent-success: #48BB78;
+    --font-primary: 'Poppins', sans-serif ;
+    --font-tasklist: 'Fira Sans', sans-serif;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+}

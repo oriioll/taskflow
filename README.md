@@ -1,6 +1,5 @@
 # 🚀 TaskFlow: The Efficient To-Do List Manager
 
-!
 
 **TaskFlow** is a minimalist and modern task manager designed to help you prioritize and manage your to-do list with a focus on **clarity** and **quick action**. It was developed using pure HTML, CSS, and JavaScript (Vanilla JS) as a practice project to master DOM manipulation fundamentals.
 
