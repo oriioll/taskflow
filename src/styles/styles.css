@@ -1,24 +1,146 @@
 :root {
-    --bg-primary: #1A202C;
-    --bg-task-item: #2D3748;
-    --text-primary: #F7FAFC;
-    --accent-action: #4299E1;
-    --accent-success: #48BB78;
-    --font-primary: 'Poppins', sans-serif ;
-    --font-tasklist: 'Fira Sans', sans-serif;
-
+  --bg-primary: #1a202c;
+  --bg-task-item: #2d3748;
+  --text-primary: #f7fafc;
+  --accent-action: #4299e1;
+  --accent-success: #48bb78;
+  --font-primary: "Poppins", sans-serif;
+  --font-tasklist: "Fira Sans", sans-serif;
+  --bg-primary-light: #1068ff;
+  --bg-primary-center: #3d6394;
+  --bg-primary-gradient: radial-gradient(
+    circle at 50% 50%,
+    var(--bg-primary-center) 5%,
+    var(--bg-primary) 80%
+  );
 }
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
 }
 
+/*Body layout*/
 body {
-    height: 100vh;
-    width: 100%;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-primary);
+  background-image: var(--bg-primary-gradient);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 18px;
+}
+/*Header and Footer layout*/
+header,
+footer {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: center;
+}
+
+header {
+    height: 15%;
+}
+
+header h2 {
+    font-size: 1.2rem
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  transform: scale(1.05);
+  filter: brightness(1.5);
+}
+
+/*Main container, input and tasklist layout*/
+main {
+  min-height: 75%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.taskList {
+  height: 80%;
+  width: 100%;
+}
+
+/*Task input form*/
+.inputForm {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+/*Input task Button*/
+.inputForm button {
+  height: 70px;
+  width: 170px;
+  background-color: var(--accent-action);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.inputForm button:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+/*Input styles*/
+.inputForm input {
+  height: 70px;
+  width: 500px;
+  border: solid 4px transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.inputForm input:focus {
+  border: solid 4px var(--accent-action);
+  outline: none;
+}
+
+.inputForm input::placeholder {
     font-family: var(--font-primary);
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+.inputForm input:hover {
+    border: solid 4px var(--accent-action);
 }

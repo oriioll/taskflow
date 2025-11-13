@@ -20,18 +20,21 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:wght@600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="src/assets/logo.png" />
   </head>
   <body>
     <header>
-      <h1>Taskflow</h1>
+      <h1>TaskFlow</h1>
+      <h2>Optimized Online Free Task Manager to organize and check your tasks</h2>
     </header>
     <main>
+      <ul class="taskList" id="taskList">
+        <li></li>
+      </ul>
       <div class="inputForm">
-        <input type="text" name="taskInput" id="taskInput">
+        <input placeholder="Add your task here!" type="text" name="taskInput" id="taskInput" />
         <button id="addTaskBtn">Add Task</button>
       </div>
-      <ul class="taskList" id="taskList">
-      </ul>
     </main>
     <footer>
       <a
