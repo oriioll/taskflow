@@ -27,3 +27,13 @@ li.addEventListener('Click => {
 
     }')
 */
+
+let inputText = ""
+
+function createTask() {
+    inputText = document.getElementById('taskInput').value
+    console.log(inputText)
+}
+document.getElementById('addTaskBtn').addEventListener('click', () => {
+  createTask(); 
+});
