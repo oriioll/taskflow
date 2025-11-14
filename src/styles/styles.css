@@ -53,13 +53,12 @@ footer {
 }
 
 header {
-    height: 15%;
+  height: 15%;
 }
 
 header h2 {
-    font-size: 1.2rem
+  font-size: 1.2rem;
 }
-
 
 footer a {
   text-decoration: none;
@@ -93,14 +92,13 @@ main {
   gap: 10px;
   text-decoration: none;
   list-style: none;
-
 }
 
 .taskList li {
-    background-color: var(--bg-task-item);
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 15px;
+  background-color: var(--bg-task-item);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 15px;
 }
 
 /*Task input form*/
@@ -151,11 +149,44 @@ main {
 }
 
 .inputForm input::placeholder {
-    font-family: var(--font-primary);
-    font-size: 1.3rem;
-    padding: 10px;
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  padding: 10px;
 }
 
 .inputForm input:hover {
-    border: solid 4px var(--accent-action);
+  border: solid 4px var(--accent-action);
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 800px) {
+  header {
+    font-size: 1.1rem;
+  }
+
+  header h2 {
+    font-size: 0.9rem;
+  }
+  .inputForm {
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 10px;
+  }
+  .inputForm input {
+    width: 300px;
+    height: 50px;
+  }
+  .inputForm button {
+    height: 50px;
+    width: 140px;
+    font-size: 1.1rem;
+  }
+  footer {
+    font-size: 1.1rem;
+  }
+  .taskList {
+    min-height: 80%;
+    width: auto;
+    font-size: 1rem;
+  }
 }
