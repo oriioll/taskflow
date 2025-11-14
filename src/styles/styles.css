@@ -50,6 +50,7 @@ footer {
   font-size: 1.5rem;
   padding: 10px;
   text-align: center;
+  animation: fadeInDown 0.6s ease-in-out;
 }
 
 header {
@@ -99,6 +100,7 @@ main {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 15px;
+  animation: fadeInUp 0.6s ease-in-out;
 }
 
 /*Task input form*/
@@ -110,6 +112,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 5%;
+  animation: fadeInUp 0.6s ease-in-out;
 }
 
 /*Input task Button*/
@@ -188,5 +191,48 @@ main {
     min-height: 80%;
     width: auto;
     font-size: 1rem;
+  }
+}
+
+/*FADE IN ANIMATIONS*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
