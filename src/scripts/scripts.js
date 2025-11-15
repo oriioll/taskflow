@@ -44,7 +44,6 @@ function createTask() {
 }
 
 //function to style li element when its clicked
-
 function completeTask(clickedElement) {
   let isCompleted = clickedElement.getAttribute("data-is-completed") === "true";
   if (!isCompleted) {
@@ -63,6 +62,11 @@ function completeTask(clickedElement) {
 }
 }
 
+//function to delete task
+function deleteTask(clickedElement) {
+    clickedElement.remove()
+}
+
 document.getElementById("addTaskBtn").addEventListener("click", () => {
   createTask();
 });
@@ -78,5 +82,12 @@ document.getElementById("taskInput").addEventListener("keydown", (event) => {
 document.getElementById("taskList").addEventListener("click", (event) => {
   if (event.target.tagName === "LI") {
     completeTask(event.target);
+  }
+});
+
+//delete task when double click
+document.getElementById("taskList").addEventListener("dblclick", (event) => {
+  if (event.target.tagName === "LI") {
+    deleteTask(event.target);
   }
 });
