@@ -29,11 +29,26 @@ li.addEventListener('Click => {
 */
 
 let inputText = ""
+let newTask = ""
 
 function createTask() {
     inputText = document.getElementById('taskInput').value
     console.log(inputText)
+    if(inputText.trim() !== "") {
+        newTask = document.createElement('li');
+        newTask.textContent = inputText;
+        document.getElementById('taskList').appendChild(newTask);
+        document.getElementById('taskInput').value = "";
+    }
+    
 }
 document.getElementById('addTaskBtn').addEventListener('click', () => {
   createTask(); 
 });
+
+//listens when a key is pressed inside the input and saves it into "event", then checks if that key (event.key) is the enter and if so, creates a task
+document.getElementById('taskInput').addEventListener('keydown', (event) => { 
+  if (event.key === 'Enter') {
+    createTask(); 
+  }
+})
