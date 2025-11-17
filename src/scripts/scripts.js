@@ -37,7 +37,7 @@ function createTask() {
   console.log(inputText);
   if (inputText.trim() !== "") {
     newTask = document.createElement("li");
-    newTask.textContent = inputText;
+    newTask.textContent = `${inputText} `;
     document.getElementById("taskList").appendChild(newTask);
     document.getElementById("taskInput").value = "";
   }
